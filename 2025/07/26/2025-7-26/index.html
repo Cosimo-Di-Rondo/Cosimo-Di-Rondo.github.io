@@ -1,0 +1,442 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>腾讯产品18讲——比 | Cosimo-Jang</title><meta name="author" content="Cosimo-Jang"><meta name="copyright" content="Cosimo-Jang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="本文为腾讯产品18讲——比部分内容，包括产品定位思路，以及商业化方案">
+<meta property="og:type" content="article">
+<meta property="og:title" content="腾讯产品18讲——比">
+<meta property="og:url" content="https://blog-phi-ashy.vercel.app/2025/07/26/2025-7-26/index.html">
+<meta property="og:site_name" content="Cosimo-Jang">
+<meta property="og:description" content="本文为腾讯产品18讲——比部分内容，包括产品定位思路，以及商业化方案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog-phi-ashy.vercel.app/image/2025-7-21/cover.png">
+<meta property="article:published_time" content="2025-07-25T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-07-25T16:00:00.000Z">
+<meta property="article:author" content="Cosimo-Jang">
+<meta property="article:tag" content="产品经理">
+<meta property="article:tag" content="腾讯产品18讲">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog-phi-ashy.vercel.app/image/2025-7-21/cover.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "腾讯产品18讲——比",
+  "url": "https://blog-phi-ashy.vercel.app/2025/07/26/2025-7-26/",
+  "image": "https://blog-phi-ashy.vercel.app/image/2025-7-21/cover.png",
+  "datePublished": "2025-07-25T16:00:00.000Z",
+  "dateModified": "2025-07-25T16:00:00.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Cosimo-Jang",
+      "url": "https://blog-phi-ashy.vercel.app/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog-phi-ashy.vercel.app/2025/07/26/2025-7-26/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":"ture"},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: Cosimo-Jang","link":"链接: ","source":"来源: Cosimo-Jang","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '腾讯产品18讲——比',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/ALL/TouXiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/image/2025-7-21/cover.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Cosimo-Jang</span></a><a class="nav-page-title" href="/"><span class="site-name">腾讯产品18讲——比</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">腾讯产品18讲——比</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-07-25T16:00:00.000Z" title="发表于 2025-07-26 00:00:00">2025-07-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-07-25T16:00:00.000Z" title="更新于 2025-07-26 00:00:00">2025-07-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BA%A7%E5%93%81%E7%9F%A5%E8%AF%86/">产品知识</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>对外，我们要看清市场竞争格局；对内，我们要审视自己的优势，从而确定自己产品的竞争策略、盈利模式。</p>
+<h2 id="一、分析行业竞争格局"><a href="#一、分析行业竞争格局" class="headerlink" title="一、分析行业竞争格局"></a>一、分析行业竞争格局</h2><h3 id="红海"><a href="#红海" class="headerlink" title="红海"></a>红海</h3><ul>
+<li><strong>定义</strong>：现存的产业，已知的市场空间。</li>
+<li><strong>特征</strong>：<ul>
+<li>产业界限已被划定，竞争规则被人熟知。</li>
+<li>市场空间越来越拥挤，利润获取和规模增长越来越难。</li>
+</ul>
+</li>
+</ul>
+<h3 id="蓝海"><a href="#蓝海" class="headerlink" title="蓝海"></a>蓝海</h3><ul>
+<li><strong>定义</strong>：不存在的产业，未知&#x2F;未被开发的市场空间。</li>
+<li><strong>特征</strong>：<ul>
+<li>规则未制定。</li>
+<li>以创造新需求为主，而非竞争。</li>
+<li>具有高利润、高增长机会。</li>
+</ul>
+</li>
+</ul>
+<h3 id="如何找到蓝海"><a href="#如何找到蓝海" class="headerlink" title="如何找到蓝海"></a>如何找到蓝海</h3><ol>
+<li>不一定是全新领域，可以<strong>拓展现有业务边界</strong>。</li>
+<li><strong>跨界借鉴</strong>：基于相同目的的产品或服务之间的组合，创造新体验。</li>
+<li><strong>寻找新的用户群</strong>：不被现有产业边界局限。</li>
+<li><strong>打破规则</strong>：在巨头的缝隙中找到新市场。</li>
+</ol>
+<h3 id="蓝海的危机"><a href="#蓝海的危机" class="headerlink" title="蓝海的危机"></a>蓝海的危机</h3><ul>
+<li>没有前人经验可以模仿，危机四伏。要确保新产品&#x2F;服务与用户价值紧密相连。</li>
+<li>太早入场，市场不成熟，没有合适的商业模式或教育用户，可能被后来者收割。</li>
+</ul>
+<blockquote>
+<p><strong>耐得住寂寞，等风来</strong><br>蓝海进入者少，早期一定是寂寞的，要坚持，不放弃，等风口来临。</p>
+</blockquote>
+<h3 id="红海中的机会"><a href="#红海中的机会" class="headerlink" title="红海中的机会"></a>红海中的机会</h3><ul>
+<li><strong>关键点</strong>：充分发挥自身优势，建立差异化特征，积累辨识度，<strong>占领用户心智</strong>。</li>
+</ul>
+<hr>
+<h2 id="二、发挥优势，确定产品定位"><a href="#二、发挥优势，确定产品定位" class="headerlink" title="二、发挥优势，确定产品定位"></a>二、发挥优势，确定产品定位</h2><h3 id="什么是产品定位？"><a href="#什么是产品定位？" class="headerlink" title="什么是产品定位？"></a>什么是产品定位？</h3><p>产品经理要回答以下四个问题：</p>
+<ol>
+<li>产品的用户是谁？在哪儿？</li>
+<li>产品能满足用户在哪些场景下的什么需求？</li>
+<li>产品的核心能力是什么？和其他产品相比的差异点是什么？</li>
+<li>产品的边界在哪里？</li>
+</ol>
+<h3 id="马氏三问（小马哥立项评审思路）"><a href="#马氏三问（小马哥立项评审思路）" class="headerlink" title="马氏三问（小马哥立项评审思路）"></a>马氏三问（小马哥立项评审思路）</h3><ol>
+<li><strong>领域匹配</strong><br>这个新的领域是不是你擅长的？<br>为什么是你来满足用户需求？</li>
+<li><strong>必要性</strong><br>如果你不做，用户会损失什么？</li>
+<li><strong>竞争优势</strong><br>如果做了，你能保持多大的竞争优势？</li>
+</ol>
+<h3 id="如何定位？"><a href="#如何定位？" class="headerlink" title="如何定位？"></a>如何定位？</h3><ul>
+<li>对比竞争对手，找到差异点并发挥优势，不断打磨核心能力。</li>
+<li>从以下三个方面挖掘：<ul>
+<li><strong>产品</strong>：人无我有、人有我优的独特内容或服务。</li>
+<li><strong>渠道</strong>：更高效或更低成本触达目标用户。</li>
+<li><strong>生态</strong>：借助上下游合作伙伴，形成合力。</li>
+</ul>
+</li>
+</ul>
+<h3 id="动态调整定位"><a href="#动态调整定位" class="headerlink" title="动态调整定位"></a>动态调整定位</h3><ul>
+<li>定位需要随着产品生命周期调整。</li>
+<li>随着市场深入、用户群变化，产品也会转型。</li>
+</ul>
+<hr>
+<h2 id="三、确定产品商业化模式"><a href="#三、确定产品商业化模式" class="headerlink" title="三、确定产品商业化模式"></a>三、确定产品商业化模式</h2><p>对商业逻辑的敏感度是产品经理的必修素质。<strong>商业化是产品自我造血能力的来源</strong>。</p>
+<h3 id="商业化的前提"><a href="#商业化的前提" class="headerlink" title="商业化的前提"></a>商业化的前提</h3><p>产品必须先提供价值，一切以用户为依归。</p>
+<h3 id="常见商业化模式"><a href="#常见商业化模式" class="headerlink" title="常见商业化模式"></a>常见商业化模式</h3><h4 id="1-To-C"><a href="#1-To-C" class="headerlink" title="1. To C"></a>1. To C</h4><ul>
+<li>用户直接购买产品或增值服务。</li>
+</ul>
+<h4 id="2-To-B"><a href="#2-To-B" class="headerlink" title="2. To B"></a>2. To B</h4><ul>
+<li>通过能力或资源输出，帮助其他企业或组织获得收益中的一部分。</li>
+</ul>
+<p><strong>共同点：</strong><br>需要良好的体验，核心问题是：  </p>
+<ul>
+<li>产品的核心价值是什么？</li>
+<li>客户痛点是什么？</li>
+<li>产品如何解决问题？</li>
+</ul>
+<hr>
+<h3 id="选择合适的商业模式"><a href="#选择合适的商业模式" class="headerlink" title="选择合适的商业模式"></a>选择合适的商业模式</h3><h4 id="思路一：结合产品特点"><a href="#思路一：结合产品特点" class="headerlink" title="思路一：结合产品特点"></a>思路一：结合产品特点</h4><p>三种典型模式：</p>
+<ol>
+<li><strong>直接售卖</strong>：电商、内容付费。</li>
+<li><strong>增值服务</strong>：免费基础功能聚人气，付费提供特权。</li>
+<li><strong>流量变现</strong>：广告、流量分发。</li>
+</ol>
+<h4 id="思路二：结合产品发展阶段"><a href="#思路二：结合产品发展阶段" class="headerlink" title="思路二：结合产品发展阶段"></a>思路二：结合产品发展阶段</h4><p>三问：</p>
+<ol>
+<li>我的资源、能力是什么？</li>
+<li>我能提供什么价值？</li>
+<li>收益是否大于机会成本？</li>
+</ol>
+<p>随着阶段变化，动态调整商业模式。</p>
+<h4 id="思路三：结合市场发展阶段"><a href="#思路三：结合市场发展阶段" class="headerlink" title="思路三：结合市场发展阶段"></a>思路三：结合市场发展阶段</h4><p>考虑：</p>
+<ul>
+<li>用户对产品的认知。</li>
+<li>对付费的接受程度。</li>
+<li>国家支付渠道普及程度。</li>
+</ul>
+<hr>
+<h3 id="商业化要优雅"><a href="#商业化要优雅" class="headerlink" title="商业化要优雅"></a>商业化要优雅</h3><p><strong>商业化不能以牺牲用户体验为代价。</strong><br>粗暴的方式虽然带来短期收入，但会损害长期价值。</p>
+<p>张小龙曾说：  </p>
+<blockquote>
+<p>好的产品，是让商业存在于无形，靠自然的服务体验打动用户。</p>
+</blockquote>
+<h4 id="如何做到优雅？"><a href="#如何做到优雅？" class="headerlink" title="如何做到优雅？"></a>如何做到优雅？</h4><ol>
+<li><strong>兼顾产品和体验</strong><br>商业模式与产品调性自然融合。</li>
+<li><strong>把选择权交给用户</strong><br>给用户可见且可控的选择权。</li>
+<li><strong>满足个性化需求</strong><br>根据用户行为制定更精细的策略。</li>
+</ol>
+<hr>
+<h2 id="避坑指南"><a href="#避坑指南" class="headerlink" title="避坑指南"></a>避坑指南</h2><ol>
+<li><strong>避免为了竞争而竞争</strong>  <ul>
+<li>以用户价值为核心，保持同理心。</li>
+<li>不要盲目跟随对手步伐。</li>
+</ul>
+</li>
+<li><strong>避免为了商业化损害用户体验</strong>  <ul>
+<li>短期的收入不值得以牺牲长期价值为代价。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<blockquote>
+<p>不论是竞争还是创新，永远回到核心问题：<br><strong>用户真正想要的是什么？</strong></p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog-phi-ashy.vercel.app">Cosimo-Jang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog-phi-ashy.vercel.app/2025/07/26/2025-7-26/">https://blog-phi-ashy.vercel.app/2025/07/26/2025-7-26/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog-phi-ashy.vercel.app" target="_blank">Cosimo-Jang</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理</a><a class="post-meta__tags" href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%A7%E5%93%8118%E8%AE%B2/">腾讯产品18讲</a></div><div class="post-share"><div class="social-share" data-image="/image/2025-7-21/cover.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/image/ALL/WXpay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/ALL/WXpay.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/image/ALL/ZFBpay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/ALL/ZFBpay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/07/21/2025-7-21/" title="腾讯产品18讲——找"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/2025-7-21/cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">腾讯产品18讲——找</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/05/07/2025-05-08/" title="谈对交易成本的理解"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/blog/ChanP.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-07</div><div class="info-item-2">谈对交易成本的理解</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2025/05/01/2025-05-01/" title="产品小白的第一篇博客"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/blog/ChanP.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-01</div><div class="info-item-2">产品小白的第一篇博客</div></div><div class="info-2"><div class="info-item-1">产品小白的第一篇博客很开心会有朋友来看我，这是我的第一篇博客，网站还在搭建过程中，很开心很期待可以通过这种方式和大家分享我在产品学习路上的心得，以及一些日常随笔。总之，见字如面，我们后边的文章见！   </div></div></div></a><a class="pagination-related" href="/2025/05/09/2025-05-09/" title="理性决策"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/blog/ChanP.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-09</div><div class="info-item-2">理性决策</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2025/05/10/2025-05-10/" title="常见的决策和误区"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/blog/ChanP.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-10</div><div class="info-item-2">常见的决策和误区</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2025/07/21/2025-7-21/" title="腾讯产品18讲——找"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/2025-7-21/cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-21</div><div class="info-item-2">腾讯产品18讲——找</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/ALL/TouXiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Cosimo-Jang</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Cosimo-Di-Rondo"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Cosimo-Di-Rondo" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:mailto:sz5207441@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.xiaohongshu.com/user/profile/600d0b19000000000100ab67?m_source=itab" target="_blank" title="小红书"><i class="fas fa-book" style="color: #ff2442;"></i></a><a class="social-icon" href="https://v.douyin.com/RYOFXsV0gbQ/ 8@7.com" target="_blank" title="抖音"><i class="fab fa-tiktok" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">我的天性是挺胸直立，骄傲而无所畏惧</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%88%86%E6%9E%90%E8%A1%8C%E4%B8%9A%E7%AB%9E%E4%BA%89%E6%A0%BC%E5%B1%80"><span class="toc-number">1.</span> <span class="toc-text">一、分析行业竞争格局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%A2%E6%B5%B7"><span class="toc-number">1.1.</span> <span class="toc-text">红海</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%93%9D%E6%B5%B7"><span class="toc-number">1.2.</span> <span class="toc-text">蓝海</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%89%BE%E5%88%B0%E8%93%9D%E6%B5%B7"><span class="toc-number">1.3.</span> <span class="toc-text">如何找到蓝海</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%93%9D%E6%B5%B7%E7%9A%84%E5%8D%B1%E6%9C%BA"><span class="toc-number">1.4.</span> <span class="toc-text">蓝海的危机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%A2%E6%B5%B7%E4%B8%AD%E7%9A%84%E6%9C%BA%E4%BC%9A"><span class="toc-number">1.5.</span> <span class="toc-text">红海中的机会</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%8F%91%E6%8C%A5%E4%BC%98%E5%8A%BF%EF%BC%8C%E7%A1%AE%E5%AE%9A%E4%BA%A7%E5%93%81%E5%AE%9A%E4%BD%8D"><span class="toc-number">2.</span> <span class="toc-text">二、发挥优势，确定产品定位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%A7%E5%93%81%E5%AE%9A%E4%BD%8D%EF%BC%9F"><span class="toc-number">2.1.</span> <span class="toc-text">什么是产品定位？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A9%AC%E6%B0%8F%E4%B8%89%E9%97%AE%EF%BC%88%E5%B0%8F%E9%A9%AC%E5%93%A5%E7%AB%8B%E9%A1%B9%E8%AF%84%E5%AE%A1%E6%80%9D%E8%B7%AF%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">马氏三问（小马哥立项评审思路）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%EF%BC%9F"><span class="toc-number">2.3.</span> <span class="toc-text">如何定位？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%B0%83%E6%95%B4%E5%AE%9A%E4%BD%8D"><span class="toc-number">2.4.</span> <span class="toc-text">动态调整定位</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%A1%AE%E5%AE%9A%E4%BA%A7%E5%93%81%E5%95%86%E4%B8%9A%E5%8C%96%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">三、确定产品商业化模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E4%B8%9A%E5%8C%96%E7%9A%84%E5%89%8D%E6%8F%90"><span class="toc-number">3.1.</span> <span class="toc-text">商业化的前提</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%95%86%E4%B8%9A%E5%8C%96%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.2.</span> <span class="toc-text">常见商业化模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-To-C"><span class="toc-number">3.2.1.</span> <span class="toc-text">1. To C</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-To-B"><span class="toc-number">3.2.2.</span> <span class="toc-text">2. To B</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%90%88%E9%80%82%E7%9A%84%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.3.</span> <span class="toc-text">选择合适的商业模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF%E4%B8%80%EF%BC%9A%E7%BB%93%E5%90%88%E4%BA%A7%E5%93%81%E7%89%B9%E7%82%B9"><span class="toc-number">3.3.1.</span> <span class="toc-text">思路一：结合产品特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF%E4%BA%8C%EF%BC%9A%E7%BB%93%E5%90%88%E4%BA%A7%E5%93%81%E5%8F%91%E5%B1%95%E9%98%B6%E6%AE%B5"><span class="toc-number">3.3.2.</span> <span class="toc-text">思路二：结合产品发展阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF%E4%B8%89%EF%BC%9A%E7%BB%93%E5%90%88%E5%B8%82%E5%9C%BA%E5%8F%91%E5%B1%95%E9%98%B6%E6%AE%B5"><span class="toc-number">3.3.3.</span> <span class="toc-text">思路三：结合市场发展阶段</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E4%B8%9A%E5%8C%96%E8%A6%81%E4%BC%98%E9%9B%85"><span class="toc-number">3.4.</span> <span class="toc-text">商业化要优雅</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%81%9A%E5%88%B0%E4%BC%98%E9%9B%85%EF%BC%9F"><span class="toc-number">3.4.1.</span> <span class="toc-text">如何做到优雅？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97"><span class="toc-number">4.</span> <span class="toc-text">避坑指南</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/07/26/2025-7-26/" title="腾讯产品18讲——比"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/2025-7-21/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="腾讯产品18讲——比"/></a><div class="content"><a class="title" href="/2025/07/26/2025-7-26/" title="腾讯产品18讲——比">腾讯产品18讲——比</a><time datetime="2025-07-25T16:00:00.000Z" title="发表于 2025-07-26 00:00:00">2025-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/21/2025-7-21/" title="腾讯产品18讲——找"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/2025-7-21/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="腾讯产品18讲——找"/></a><div class="content"><a class="title" href="/2025/07/21/2025-7-21/" title="腾讯产品18讲——找">腾讯产品18讲——找</a><time datetime="2025-07-21T02:00:00.000Z" title="发表于 2025-07-21 10:00:00">2025-07-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/20/2025-6-20/" title="AI+X高校行中的感悟和复盘"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/ALL/coze.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI+X高校行中的感悟和复盘"/></a><div class="content"><a class="title" href="/2025/06/20/2025-6-20/" title="AI+X高校行中的感悟和复盘">AI+X高校行中的感悟和复盘</a><time datetime="2025-06-20T15:41:24.000Z" title="发表于 2025-06-20 23:41:24">2025-06-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/05/10/2025-05-10/" title="常见的决策和误区"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/blog/ChanP.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常见的决策和误区"/></a><div class="content"><a class="title" href="/2025/05/10/2025-05-10/" title="常见的决策和误区">常见的决策和误区</a><time datetime="2025-05-09T16:00:00.000Z" title="发表于 2025-05-10 00:00:00">2025-05-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/05/09/2025-05-09/" title="理性决策"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/blog/ChanP.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理性决策"/></a><div class="content"><a class="title" href="/2025/05/09/2025-05-09/" title="理性决策">理性决策</a><time datetime="2025-05-08T16:00:00.000Z" title="发表于 2025-05-09 00:00:00">2025-05-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 By Cosimo-Jang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = `%%{init:{ 'theme':'${theme}'}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (false) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const applyThemeDefaultsConfig = theme => {
+    if (theme === 'dark-mode') {
+      Chart.defaults.color = "rgba(255, 255, 255, 0.8)"
+      Chart.defaults.borderColor = "rgba(255, 255, 255, 0.2)"
+      Chart.defaults.scale.ticks.backdropColor = "transparent"
+    } else {
+      Chart.defaults.color = "rgba(0, 0, 0, 0.8)"
+      Chart.defaults.borderColor = "rgba(0, 0, 0, 0.1)"
+      Chart.defaults.scale.ticks.backdropColor = "transparent"
+    }
+  }
+
+  // Recursively traverse the config object and automatically apply theme-specific color schemes
+  const applyThemeConfig = (obj, theme) => {
+    if (typeof obj !== 'object' || obj === null) return
+
+    Object.keys(obj).forEach(key => {
+      const value = obj[key]
+      // If the property is an object and has theme-specific options, apply them
+      if (typeof value === 'object' && value !== null) {
+        if (value[theme]) {
+          obj[key] = value[theme] // Apply the value for the current theme
+        } else {
+          // Recursively process child objects
+          applyThemeConfig(value, theme)
+        }
+      }
+    })
+  }
+
+  const runChartJS = ele => {
+    window.loadChartJS = true
+
+    Array.from(ele).forEach((item, index) => {
+      const chartSrc = item.firstElementChild
+      const chartID = item.getAttribute('data-chartjs-id') || ('chartjs-' + index) // Use custom ID or default ID
+      const width = item.getAttribute('data-width')
+      const existingCanvas = document.getElementById(chartID)
+
+      // If a canvas already exists, remove it to avoid rendering duplicates
+      if (existingCanvas) {
+          existingCanvas.parentNode.remove()
+      }
+
+      const chartDefinition = chartSrc.textContent
+      const canvas = document.createElement('canvas')
+      canvas.id = chartID
+
+      const div = document.createElement('div')
+      div.className = 'chartjs-wrap'
+
+      if (width) {
+        div.style.width = width
+      }
+
+      div.appendChild(canvas)
+      chartSrc.insertAdjacentElement('afterend', div)
+
+      const ctx = document.getElementById(chartID).getContext('2d')
+
+      const config = JSON.parse(chartDefinition)
+
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark-mode' : 'light-mode'
+
+      // Set default styles (initial setup)
+      applyThemeDefaultsConfig(theme)
+
+      // Automatically traverse the config and apply dual-mode color schemes
+      applyThemeConfig(config, theme)
+
+      new Chart(ctx, config)
+    })
+  }
+
+  const loadChartJS = () => {
+    const chartJSEle = document.querySelectorAll('#article-container .chartjs-container')
+    if (chartJSEle.length === 0) return
+
+    window.loadChartJS ? runChartJS(chartJSEle) : btf.getScript('https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js').then(() => runChartJS(chartJSEle))
+  }
+
+  // Listen for theme change events
+  btf.addGlobalFn('themeChange', loadChartJS, 'chartjs')
+  btf.addGlobalFn('encrypt', loadChartJS, 'chartjs')
+
+  window.pjax ? loadChartJS() : document.addEventListener('DOMContentLoaded', loadChartJS)
+})()</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="输入关键词搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
